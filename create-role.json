@@ -1,0 +1,6 @@
+{
+  "code": "TEAM_LEAD",
+  "name": "Team Lead",
+  "description": "Team lead with limited approval rights",
+  "permissionCodes": ["employee:read", "employee:write", "leave:approve:team", "attendance:team:read"]
+}

@@ -1,0 +1,13 @@
+{
+  "legalEntityId": "70d165b2-7ea9-4e04-ab51-4b87db52de99",
+  "name": "Head Office - Mumbai",
+  "code": "HO-MUM",
+  "address": "123 Bandra Kurla Complex, Mumbai",
+  "state": "Maharashtra",
+  "pincode": "400051",
+  "timezone": "Asia/Kolkata",
+  "latitude": 19.076,
+  "longitude": 72.8777,
+  "geofenceRadius": 100,
+  "isActive": true
+}

@@ -1,0 +1,5 @@
+# Ignore log files
+*.log
+logs/
+apps/api/logs/
+

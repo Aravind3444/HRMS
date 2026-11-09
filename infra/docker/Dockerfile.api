@@ -1,0 +1,10 @@
+﻿FROM node:20-alpine AS base
+WORKDIR /app
+RUN npm install -g pnpm
+
+COPY . .
+RUN pnpm install --frozen-lockfile
+RUN pnpm --filter @hrms/api build
+
+EXPOSE 4000
+CMD ["node", "apps/api/dist/main.js"]

@@ -1,0 +1,24 @@
+HTTP/1.1 200 OK
+Content-Security-Policy: default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+Origin-Agent-Cluster: ?1
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-DNS-Prefetch-Control: off
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-Permitted-Cross-Domain-Policies: none
+X-XSS-Protection: 0
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Set-Cookie: hrms_access_token=f7f884f8-5067-43bb-ae76-3c1f7f1af4bb; Max-Age=86400; Path=/; Expires=Fri, 06 Nov 2026 13:50:54 GMT; HttpOnly; SameSite=Lax
+Set-Cookie: hrms_refresh_token=9bb10ae89b1c0f41f1b1483cea779d7c2c6dff2c93c134f98712f16a95bc6615; Max-Age=43200; Path=/; Expires=Fri, 06 Nov 2026 01:50:54 GMT; HttpOnly; SameSite=Lax
+Content-Type: application/json; charset=utf-8
+Content-Length: 197
+ETag: W/"c5-LW7UyabMAJhabuY2s1FEAveQoNA"
+Date: Thu, 05 Nov 2026 13:50:54 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+

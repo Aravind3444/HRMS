@@ -1,0 +1,9 @@
+{
+  "code": "GA",
+  "name": "Grade A",
+  "description": "Senior level grade",
+  "minSalary": 50000,
+  "maxSalary": 100000,
+  "currency": "INR",
+  "isActive": true
+}
