@@ -9,6 +9,39 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: hrms_user
+          POSTGRES_PASSWORD: hrms_password
+          POSTGRES_DB: hrms_dev
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      DATABASE_URL: "postgresql://hrms_user:hrms_password@localhost:5432/hrms_dev?schema=public"
+      REDIS_URL: "redis://localhost:6379"
+      NODE_ENV: test
+      JWT_SECRET: "test_secret_for_ci_pipeline_only_32_chars_min"
+      COOKIE_SECRET: "test_cookie_secret_for_ci_pipeline_only"
+
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v3
@@ -24,6 +57,9 @@ jobs:
 
       - name: Generate Prisma Client
         run: pnpm --filter @hrms/api db:generate
+
+      - name: Run Prisma Migrations
+        run: pnpm --filter @hrms/api db:migrate:deploy
 
       - name: Lint
         run: pnpm lint
