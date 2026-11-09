@@ -8,6 +8,7 @@
     "dev:admin": "vite --config vite.admin.config.ts",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "type-check": "tsc --noEmit",
     "lint": "eslint src"
   },
   "dependencies": {
